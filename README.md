@@ -1,12 +1,15 @@
 # retrofit2-jsonobject-converter
-A Retrofit 2 converter to convert your request and response data to org.json.JSONObject
+A Retrofit 2 converter to convert your request and response data to org.json.JSONObject.
 
+# Compatibility
+
+Tested with Retrofit 2.0.0-beta2
 
 # Usage
 
 Register the converter:
 
-```
+```java
 OkHttpClient client = new OkHttpClient();
 Retrofit restAdapter = new Retrofit.Builder()
         .baseUrl(endPoint)
@@ -19,7 +22,7 @@ api = restAdapter.create(PdApiInterface.class);
 
 In your API interface file:
 
-```
+```java
 @POST("/v2/package")
     Call<JSONObject> subscribePackage(@Body JSONObject data);
 
@@ -29,7 +32,7 @@ In your API interface file:
 
 Then in your code:
 
-```
+```java
 Call c = api.getAccount(getApiManager().getAccountId());
 c.enqueue(new Callback<JSONObject>() {
     @Override
