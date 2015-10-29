@@ -1,4 +1,5 @@
-# retrofit2-jsonobject-converter
+# Retrofit2 JSONObject converter
+
 A Retrofit 2 converter to convert your request and response data to org.json.JSONObject.
 
 # Compatibility
